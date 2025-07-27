@@ -15,3 +15,19 @@ Un modelo ideal, se vería con curvas paralelas, teniendo una pequeña separaci�
 Además, estás deberían estabilizarse juntas. Y por último, no tendrían oscilaciones fuertes en la validación. 
 
 --- Parte 2 ---
+
+* ¿Qué modelo funcionó mejor? ¿RNN tradicional o el basado en LSTM? ¿Por qué?
+Se puede observar como el modelo LSTM es mejor en la perdida de entrenamiento, tiene valores mas bajos y se ve mas estable, lo cual indica una mejor capacidad de generalización.
+Por el otro lado, la curva de validacion de LSTM es variable, pueden estar afectando la sensibilidad del modelo a los datos. 
+Puede que el LSTM este diseñado para capturar dependencias a largo plazo, pero su entrenamiento puede ser más delicado y propenso a oscilaciones
+
+* Observen la gráfica obtenida arriba, ¿en qué es diferente a la obtenida a RNN? ¿Es esto mejor o peor? ¿Por qué?
+La RNN tiene una perdida de entrenamineto y de validacion que disminuyen con mas consistencia pero esta pareciera que tiende a aumentar,
+teniendo resultados mas altos que los de la grafica de LSTM.
+En cambio en la LSTM se puede observar como al incio es muy variable pero luego tiende a mejorar sus valores siendo mas bajos que los de RNN. Ademas,
+se puede observar como la curva de entrenamiento es mejor.
+
+* ¿Por qué LSTM puede funcionar mejor con secuencias largas?
+LSTM esta diseñada para manerjar secuencias a largo plazo por la forma en la que esta hecha donde cada uno de sus inputs lo ayudan a evitar
+que el gradiente desvanecido. Que suele pasar mucho en RNN, lo que limita la capacidad de aprender.
+

@@ -31,3 +31,14 @@ se puede observar como la curva de entrenamiento es mejor.
 LSTM esta diseñada para manerjar secuencias a largo plazo por la forma en la que esta hecha donde cada uno de sus inputs lo ayudan a evitar
 que el gradiente desvanecido. Que suele pasar mucho en RNN, lo que limita la capacidad de aprender.
 
+--- Parte 3 ---
+
+* Compare las graficas obtenidas en el LSTM "a mano" y el LSTM "usando PyTorch, ¿cuál cree que es mejor? ¿Por qué?
+El gráfico obtenido con PyTorch es el mejor, ya que este converge de una manera más rápida, tiene una mejor generalización, lo que significa menos overfitting, tiene una mejor estabilidad de curvas a comparación de la hecha con numpy y también al final tiene una menor pérdida. 
+
+* Compare la secuencia target y la predicha de esta parte, ¿en qué parte falló el modelo?
+En la posicion número 9 se esperaba una a, pero es una b. Luego predijo una b estra porque empezó antes. 
+
+
+* ¿Qué sucede en el código donde se señala "NOTA 1" y "NOTA 2"? ¿Para qué son necesarias estas líneas?
+La nota 1 dice eval, que es la nota para el modo de evaluación, mientras que la nota 2 es para el modo de entrenamiento, lo que hacen esas notas es controlar el comportamiento interno del modelo. Son necesarias, porque puede que se usen en el orden incorrecto y el entrenamiento será inconsistente y el modelo no aprenderá bien. 
